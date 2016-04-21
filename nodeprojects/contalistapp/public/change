@@ -1,0 +1,3 @@
+// changes after login
+
+$(.div).remove("form-group");

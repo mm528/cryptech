@@ -1,0 +1,305 @@
+
+
+<html ng-app>
+<head>
+<meta charset= "utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <!-- <link rel="stylesheet" type="text/css" href="indexcss.css"> -->
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+
+<title> Cryptech</title>
+<script href="../node_modules/angular-ui-router/build/angular-ui-router.min.js"> </script>
+<link href="bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="/changes.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"> </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script scr="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type ="tetx/css" href="/indexcss.css">
+
+<script type="text/javascript" src="sliceBoxFlickr.js"></script>
+<script type="text/javascript" src="/jR3DCarousel.js"></script>
+
+
+<script type="text/javascript" src="jqueryscrolly.js"></script>
+
+
+
+
+
+
+
+</head>
+<body class="jumbotron color4">
+	<div class= "navbar navbar-inverse navbar-fixed-top" role ="navigation">
+		<div class = "container">
+			<div class = "navbar-header">
+				<button type="button" class "navbar-toogle" data-toggle="collapse" data-target=".navbar-collapse"> 
+					<span class = "sr-only"> Toogle navigation </span> 
+					<span class= "icon-bar" > </span>
+					<span class= "icon-bar" > </span>
+					<span class= "icon-bar" > </span>
+				</button>
+				<a class="navbar-brand" href="#"> Welcome to University of Brighton </a>
+			</div>
+        <div class="navbar-collapse collapse">
+			<ul class= "nav navbar-nav navbar-right">
+				<li class = "active"> <a href="#">Home</a> </li>
+					<li class="dropdown"><a data-toggle="dropdown">About <span class="caret"> </span> </a> </li>
+						<ul class = "dropdown-menu" aria-labelledby="dropdownMenuDivider">
+							<li role = "seperator"><a href="#">Test </a></li>
+								</ul>
+						</ul>
+			</div>
+
+		</div>
+</div>
+
+
+
+<div class = "container" ng-controller="AppCtrl">
+
+
+<form class = "form-horizontal" role="form" action ="/afterlogin" method ="post">
+	<div class="container">
+		<div class="jumbotron">
+			<a href="#banner" class="button circled scrolly">Start</a>
+			<center><h1> Welcome to Cryptech </h1></center>
+  
+		</div>
+	</div>
+<div class="all">
+	<div class="jRCarouselGallery">
+	</div>
+<div class = "form-group" ng-controller="AppCtrl">
+	<label class="control-label col-sm-7" for="Username">Username</label>
+		<div class="col-sm-5">
+			<div class="form-group has-success has-feedback">
+				<div class="input-group">
+					<span class="input-group-addon">@</span>
+					<input name ="log-name" class ="form-control" ng-model="loginuser.name" id ="login-name-text" placeholder="Enter Username">
+					<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="false"> </span>
+				</div>
+			</div>
+		</div>
+
+</div>
+	<div class ="form-group">
+		<label class="control-label col-sm-7" for="pwd">Password</label>
+			<div class="col-sm-5">
+				<input  type = "password" class ="form-control" ng-model="loginuser.password" id ="login-pass" placeholder= "Enter Password">
+			</div>
+	</div>
+	<div class= "form-group">
+		<div class="col-sm-offset-9 col-sm-1">
+			<button class ="btn btn-primary" ng-click="searchuser(loginuser.name, login-pass); getnames()" id="buttonlogin"  onclick="changes()" >Login</button>
+	
+			</div>
+		</div>
+	</div>
+<div class="parallax" data-velocity="-.5" data-fit="525"></div>
+</form>
+
+<form class = "form-horizontal" role="form">
+	<div class= "form-group">
+		<div class="col-sm-offset-6 col-sm-4">
+
+ 			<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Register </button>
+		<div class="modal bs-example-modal-lg" ng-controller="AppCtrl">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span>&times; </span><h3 class="modal-title"> Register</h3>
+							<h4>Welcome to cryptech! now is about to register yourself into our system! Takes less than a minute! </h4>
+								</div>
+					<div class="modal-body">
+						<div class="container">
+							<label>Username</label>
+						</div>
+						<div class="container">
+							<input type="text"	class ="form-control" id="findusername" ng-model="contact.email">
+							</div>
+						<div class="container">
+							<label>Password</label>
+							</div>
+						<div class="container">
+							<input type="password"  id="findpassword" class ="form-control" ng-model="contact.password">
+							</div>
+						<div class="container">
+							<label>Name</label>
+							</div>
+						<div class="container">
+							<input type="text" id="getname" class ="form-control"  ng-model="contact.name">
+							</div>
+						<div class="container">
+							<label>Surname</label>
+							</div>
+						<div class="container">
+							<input type="text"  id="getsurname" class ="form-control" ng-model="contact.surname">
+							</div>
+
+
+						</div>
+								
+					<div class="modal-footer">
+						<div class="container">
+							<button class="btn btn-lg btn-primary" data-dismiss="modal">Cancel</button>
+							<button class="btn btn-lg btn-primary" ng-click="savecontact();savenameandsurname()">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+ 			<label><input type="checkbox">Remember me</label>
+
+		</div>
+
+
+	</div>
+
+
+
+</form>
+   
+	</div>
+<div>
+</div>
+
+
+<!--
+<div id ="sb-slider" class="sb-slider">
+	<img src="/01819_birdonabranch_1920x1080.jpg">
+	</div>
+-->
+
+
+<script>
+$(document).ready(function(){
+
+			
+
+
+	var slides = [{src: '/hd-wallpapers_1080p.jpg'}, {src: '/01819_birdonabranch_1920x1080.jpg'}]
+
+	var carouselProps =  {
+			 		  width: 900, 				/* largest allowed width */
+					  height: 322, 				/* largest allowed height */
+					  slideLayout : 'cover',
+					     /* "contain" (fit according to aspect ratio), "fill" (stretches object to fill) and "cover" (overflows box but maintains ratio) */
+					  animation: 'scroll3D', 		/* slide | scroll | fade | zoomInSlide | zoomInScroll */
+					  animationCurve: 'ease',
+					  animationDuration: 700,
+					  animationInterval: 1000,
+					  //autoplay: false,
+					  onSlideShow: show,		/* callback when Slide show event occurs */
+					  navigation: 'circles',	/* circles | squares */
+					  slides: slides ,			/* array of images source or gets slides by 'slide' class */
+
+				
+
+						  
+				}
+	function setUp(){
+ 		$('.jRCarouselGallery').jR3DCarousel(carouselProps);
+	}
+	function show(slide){
+
+		console.log("Slide shown: ", slide.find('img').attr('src'))
+		//alert("Slide shown", slide.find('img').attr('src'));
+	}
+
+
+
+	setUp();
+})
+
+
+	</script>
+
+
+
+
+<!--
+
+<script type="text/javascript">
+	
+$(function (){
+
+	$("#sb-slider").sliceBoxFlickr({
+
+	});
+});
+
+</script>
+
+
+
+<ul id = "sb-slider" class="sb-slider">
+
+<li>
+	<a target="_blank">
+	<<img src="/01819_birdonabranch_1920x1080.jpg" alt ="image1"/>
+		</a>
+	<div class="sb-description">
+		<h3> Test me </h3>
+	</div>
+</li>
+
+<li>
+<img src="/hd-wallpapers_1080p.jpg" alt ="image2"/>
+	<div class="sb-description">
+		<h3> Test 2 </h3>
+	</div>
+</li>
+
+</ul>
+
+	<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+
+
+<script type="text/javascript">
+$(function(){
+		$('#sb-slider').slicebox();
+});
+</script
+
+-->
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+
+<script src= "controllers/controller.js"> </script>
+<script src= "/loginscript.js"> </script>
+
+	
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			
+
+<!--
+<footer> 
+<video width ="200" height="400" control autoplay align="right">
+<source src="welcome.mp4" type="video/mp4">
+</video> 
+</footer>
+
+-->
+<blockquote class ="blockquote-reverse">
+	<p> University of Brighton </p>
+	<footer class="end"> Michalis Motis </footer>
+
+</blockquote>
+
+
+
+
+
+
+
+</body>
+</html>

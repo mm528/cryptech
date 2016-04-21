@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<html ng-app>
+<head>
+	<title>Contact University</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	
+	
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	
+	<script src="../sweetalert-master/dist/sweetalert.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
+	
+	
+
+	<script src="../controllers/controller.js"> </script>
+</head>
+<body>
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1><a href="/Contact">Conact with Us</a></h1>
+			<nav class="editing ">
+				<li><a href="/"> Home </li>
+				<li><a href="/AboutUs"> About Us </a></li>
+			</nav>
+		</header>
+
+		
+		
+
+		<!-- Banner -->
+		<section id="bannermotis">
+			<div class="inner">
+				<div class="logo"><img src="../images/4f522339411d3uob-logo-1.png"></div>
+				<h2>Contact with University of Brighton</h2>
+				
+			</div>
+		</section>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+
+			<!-- One -->
+			<section id="one" class="wrapper spotlight style1">
+				<div class="inner">
+					<a href="#" class="image"><img src="10380428_10206612847860289_6625191349630396670_o (1).jpg" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Michalis Motis</h2>
+						<p>New web desinger development and a student of university of Brighton</p>
+						
+					</div>
+				</div>
+			</section>
+
+			<!-- Two -->
+			<section id="two" class="wrapper alt spotlight style2">
+				<div class="inner">
+					<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+					<div class="content">
+						<h2 class="major">University of Brighton</h2>
+						<p>Your clearly contact with University of Brighton and gives us a purely feedback to become better as University and as a socierty</p>
+						
+					</div>
+				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three" class="wrapper spotlight style3">
+				<div class="inner">
+					<a href="#" class="image"><img src="Stelios-Kapetanakis-Cropped-255x213.jpg" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Dr Stelios Kapetanakis</h2>
+						<p>Lecturer in Business Intelligence and Enterprise at University of Brigton and specialist on Artificial Intelligence has stronger enough to give a feedback to upgrade our deprartment</p>
+						
+					</div>
+				</div>
+			</section>
+
+			<!-- Four -->
+			
+
+		</section>
+
+		<!-- Footer -->
+		<section ng-controller="AppCtrl">
+			<div>
+				<h2 >Get in touch</h2>
+				<p>Send us an email to our instructor of this website and University of Brighton</p>
+				<form name="myForm">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" ng-model="contact.name" />
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" ng-model="contact.email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="4" ng-model="contact.text"></textarea>
+					</div>
+					
+				</form>
+				<div ng-controller="AppCtrl">
+
+					<script type="text/javascript">
+
+						function success(){
+
+
+							var name = document.forms["myForm"]["name"].value;
+							var email = document.forms["myForm"]["email"].value;
+							var message = document.forms["myForm"]["message"].value;
+
+							if (name == "" || email =="" || message== ""){
+								swal({  
+									title: "Please Fill all the gaps",
+									text: "You have not fill all tha gaps. Please make sure you fill out all the gaps",
+									type: "error",   
+									confirmButtonText: "Cool" });
+							}else{
+								
+								swal({  
+									title: "Thank You",
+									text: "We are really appreciate for your time to evaluate our website",
+									type: "success",   
+									confirmButtonText: "Cool" });
+							}
+						}
+						
+
+						
+
+						
+
+						
+
+
+					</script>
+					
+
+					
+					<button class="button" data-toggle="modal" data-target=".bs-example-modal-lg"  ng-click="testContact()" onClick="success()"> Post
+
+					</button>
+				</div>
+				
+
+				<ul class="contact">
+					<li class="fa-home">
+						Brighton<br />
+						22, Broadstreet<br />
+						East Sussex
+					</li>
+					<li class="fa-phone">(44) 07597292722</li>
+					<li class="fa-envelope" ><a href="http://www.google.com">information@untitled.tld</a></li>
+					<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+					<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
+					<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+				</ul>
+				
+			</div>
+		</section>
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</body>
+</html>

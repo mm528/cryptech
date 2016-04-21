@@ -1,0 +1,377 @@
+<html ng-app>
+<head>
+	<meta charset= "utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title> Cryptech</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+	<link rel="stylesheet" href="afterlogincss.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+	<link rel="stylesheet" href="css/jquery.fileupload.css">
+
+
+</head>
+
+<body>
+
+	<div class= "navbar navbar-inverse navbar-fixed-top" role ="navigation">
+		<div class = "container">
+			<div class = "navbar-header">
+				
+				<span class= "icon-bar" > </span>
+				<span class= "icon-bar" > </span>
+				<span class= "icon-bar" > </span>
+				
+				<a class="navbar-brand" href="../homepage/index.html"> Welcome to University of Brighton </a>
+				
+			</div>
+
+			<div class="navbar-collapse collapse">
+				<ul class= "nav navbar-nav navbar-right">
+					<li><a href="/homepage">Home</a></li>
+					
+					<li class="dropdown"><a href="#" data-toggle="dropdown">About <span class="caret"> </span> </a> </li>
+					<ul class = "dropdown-menu">
+						<li><a href="#">Test </a></li>
+					</ul>
+					
+				</ul>
+				
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="container" ng-controller="AppCtrl">
+		<div class="jumbotron">
+
+			
+
+			<!-- Tropo ton opio na pernw to onoma tou user p sindethike -->
+
+			<div class="container">
+				<h1> Welcome  </h1>
+				<h1 id= "namepicture" ng-repeat="contact in contactlist"> {{contact.name}} </h1>
+				<img id ="picture"src=""  class="img-circle" alt="Mountain View" style="width:154px;height:158px;">
+				
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div class= "container" ng-controller="AppCtrl">
+		<div class="row" >
+			<div class="col-sm-6 col-md-4">
+				<div class="michalis">
+					<div class="caption">
+						<center> <h3>Uploaded Courserworks</h3> </center>
+						<!-- <h3  ng-repeat="corseworks in corseworks" id="nameofFile"> {{corseworks.name}} </h3> !-->
+						
+						<script type="text/javascript">
+
+							function warning(){
+
+
+								swal({  
+									title: "Now you can read the article!",
+									text: "Take a look of articl",
+									type: "success",   
+									confirmButtonText: "Cool" });
+
+								
+
+							}
+
+							
+
+
+							
+							
+
+						</script>
+
+						<center><h3 ng-repeat="corseworks in corseworks" id="testmimo" onclick="warning()"> <a href="/courseworks"ng-click ="testController(corseworks.name)">{{corseworks.name}}</center>
+
+					</a>
+				</h3>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="col-sm-9 col-md-5">
+		<div class="michalis">
+			<div class="caption">
+				<center> <h3>Upload your own courserwork</h3> </center>
+				
+				<div ng-controller="AppCtrl">
+
+
+					<div class="form-group" >
+
+						<label>Give a name for your file</label>
+						<input type="text" class="form-control" id="nameFile">
+					</div>
+
+					<textarea rows ="4" cols="45" id="inputData">
+
+						
+
+
+					</textarea>
+					<span class="btn btn-success fileinput-button" ng-click="Motis()" onClick="move()">
+						<span>Sumbit Work</span>
+
+
+					</span>
+
+					<style>
+
+						#myProgress{
+							position: relative;
+							width: 100%;
+							height: 30px;
+							background-color: #ddd;
+
+						}
+						#myBar {
+							position: absolute;
+							width: 1%;
+							height: 100%;
+							background-color: #4CAF50;
+						}
+					</style>
+
+
+					<div id="myProgress">
+						<div id="myBar"></div>
+					</div>
+
+					<!--    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+
+
+<!--
+
+<div class="container">
+
+
+<div class = "table-responsive" ng-controller="AppCtrl">
+<h1 ng-repeat = "info in information"> {{info.title}} </h1>
+
+
+
+
+<table class="table table-hover" >	
+
+	<tr ng-repeat ="info in information">
+		<th> Title </th>
+		<td> {{info.title}}</td>
+	</tr>
+	<tr ng-repeat ="info in information">
+		<th> Descriptions </th>
+		<td> {{info.description}}</td>
+	</tr>	
+	
+
+	<tr> <!-- add input box and button-->
+<!--
+<td> <input class ="form-control" ng-model="comments.name" placeholder = "Put comment"></td>
+<td> <button class ="btn btn-primary" ng-click="addComment()">Add Comment</button></td>
+
+
+</tr>	
+</table>
+<table class= "edit2">
+<tr ng-repeat ="comment in comments" >
+	<td> Comments </td>
+	<td>{{comment.name}}</td>
+ 	<th> <button class = "btn btn-danger"  ng-click ="deletecomments (comment._id)" > Delete comment </button></th>
+
+</tr>
+
+<button class ="btn btn-primary" ng-click="Showcomments()">Show comments</button>
+</table>
+</div>
+</div>
+
+<div class="container">
+
+<h2> Select Categegory </h2>
+
+
+<p>Upload file to the server</p>
+	<span class="btn btn-default btn-file">
+    Browse <input type="file">
+   
+
+</span>
+ <input type="submit" value="Send"/>
+
+
+
+
+
+ 
+ </div>
+-->
+
+
+
+
+
+<!--
+
+
+<div ng-controller = "ImagesController">
+ <div bn-image-uploader class="driozone" >
+ <ul ng-switch-when ="true" class="queue">
+ 	<li ng-repeat="item in queue track by item.id">
+ 		{{item.percent}}%
+ 		</li>
+ 	</ul>
+
+</div>
+ 
+</div>
+
+
+
+ 	<label for = "exampleInputFile">Upload</label>
+ 	<input type="file" id="exampleInputFile" file-model = "customer.file">
+ 	</div>
+ 	<button type= "submit" class="btn btn-default" ng-click="Submit()">Subimt</button>
+ -->
+
+
+ <script src="../controllers/controller.js"></script>
+ <script src="afterloginjavascript.js"> </script>
+ <script type="text/javascript" src="/"></script>
+
+ <script src="../../node_modules/socketio-file-upload/client.js"> </script>
+
+ <script>
+ 	window.onload= function() {
+
+ 		var name = document.getElementById("namepicture");
+ 		var nameMessage = document.getElementById("pictureMessage");
+
+ 		if ( document.getElementById("namepicture") == null){
+ 			setInterval(function(){ name = document.getElementById("namepicture").textContent
+ 				
+ 				document.getElementById("picture").src= (name + '/' + name+'.JPG').replace(/\s/g,'');
+ 				
+ 				
+ 				var x = document.getElementById("picture").src;
+ 				x  = (document.getElementById("namepicture").textContent+ '/' +document.getElementById("namepicture").textContent+'.JPG').replace(/\s/g,'');
+ 				
+				//location.reload();
+		//alert(x.replace(/\s/g,''));
+	}, 100);
+ 			
+ 		}
+
+
+    //document.getElementById("picture").src = ""+document.getElementById(namepicture).innerHTML+'/'+document.getElementById(namepicture).innerHTML+'JPG';
+
+
+
+
+
+
+};
+		//alert(document.getElementById("namepicture").textContent);
+		
+		
+		//	function imagepath (){
+			//		return "Michalis/Michalis.JPG";
+					//return name+"/"+name+".JPG ";
+					
+
+			//}
+
+
+
+		</script>
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+		<script src="js/vendor/jquery.ui.widget.js"></script>
+		<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+		<script src="js/jquery.iframe-transport.js"></script>
+		<!-- The basic File Upload plugin -->
+		<script src="js/jquery.fileupload.js"></script>
+		<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<script>
+			function move(){
+				if(document.getElementById("nameFile").value == ''){
+					alert("Empty");
+				}
+				else{
+					var elem= document.getElementById("myBar");
+					var width=1;
+					var id= setInterval(frame,10);
+					function frame(){
+						if (width >=100){
+							if (width==100){
+								alert("Succesfull");
+							}
+							clearInterval(id);
+						}
+						else{
+							width++;
+							elem.style.width = width + '%';
+						}
+					}
+				}
+			};
+
+		</script>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myFile").value;
+				document.getElementById("demo").innerHTML = x;
+
+
+			}
+		</script>
+
+		<script>
+			function getnamefunction(){
+
+				var t= document.getElementById("nameofFile").value;
+				alert(t.innerHTML);
+
+
+			}
+
+
+
+		</script>
+		
+	</body>
+	</html>

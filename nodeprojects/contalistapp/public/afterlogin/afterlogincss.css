@@ -1,0 +1,62 @@
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;  
+    font-family: "Times New Roman", Times,serif;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.dropzone {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #ccc;
+    color: #ccc;
+    line-height: 300px;
+    text-align: center;
+
+
+}
+.dropzone.dragover {
+    border-color: #000;
+    color: #000;
+}
+
+
+
+.container img { 
+
+          margin-left:410px;
+
+
+
+} 
+.container h1 { text-align: center;
+
+
+}
+
+.bar { width: 20%;
+}
+
+.michalis {
+    border: 5px inset;
+    border-radius: 50px;
+
+}
+
+h3 {
+    text-align: center;
+}

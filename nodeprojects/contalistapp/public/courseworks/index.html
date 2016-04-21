@@ -1,0 +1,215 @@
+<html ng-app>
+<title> Coursework </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="../bootstrap-3.3.6-dist/css/bootstrap.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="../assets/css/main.css"/>
+<link rel="stylesheet" href="coursework.css"/>
+
+<script src="../sweetalert-master/dist/sweetalert.min.js"> </script>
+<link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
+
+<body>
+
+	<nav id="nav" ng-controller="AppCtrl">
+
+		<ul>
+			<li><a href="/homepage">Home</a></li>
+			
+			
+			
+			<li ng-click="AboutUs()"> <a href= "/AboutUs" >About Us Brighton </a></li>
+			<li ng-click= "Contact()"><a href="/Contact">Contact</a></li>
+			<li ng-click="WithoutLogin()"> <a href="/Afterlogin"> Main Page </a> </li>
+			
+		</ul>
+	</nav>
+
+	
+
+	<div class="container" ng-controller="AppCtrl">
+		
+		<div class="jumbotron">
+
+
+			<h2  ng-repeat="corseworksOutlineTwo in corseworksOutlineTwo" ng-model="commentsidetitle"> {{corseworksOutlineTwo.name}} </h2>
+			<a ng-repeat="corseworksOutlineTwo in corseworksOutlineTwo" href="" ng-click="likebutton(corseworksOutlineTwo.name)" class="glyphicon glyphicon-thumbs-up" id="icon" > </a>
+			<spam ng-repeat="corseworksOutlineTwo in corseworksOutlineTwo"> {{corseworksOutlineTwo.like}} </spam>
+		</div>
+
+
+		<a href="" class="glyphicon glyphicon-zoom-in" onClick="zoomin()"></a>
+		<a href="" class="glyphicon glyphicon-zoom-out" onClick="zoomout()"></a>
+		<script>
+			var fontSizeBody=1;
+			function zoomin() {
+
+				fontSizeBody += 0.1;
+				document.body.style.fontSize = fontSizeBody + "em";
+
+			};
+			function zoomout(){
+				fontSizeBody -= 0.1;
+				document.body.style.fontSize = fontSizeBody + "em";
+			};
+
+
+		</script>
+
+		<p ng-repeat="corseworksOutlineTwo in corseworksOutlineTwo"> {{corseworksOutlineTwo.bodyText}} </p>
+		<div class= "container" ng-controller="AppCtrl">
+			<div class="row" >
+				<div class="col-sm-4 col-md-5">
+					<div class="michalis">
+						<div class="caption">
+
+							<h4 class="glyphicon glyphicon-star">
+								<span>Related Articles</span></h4>
+								<div ng-repeat="corseworksMainPage in corseworksMainPage">
+									<center><h3 id="testmimo" onClick="warning()"> <a href="/courseworks"ng-click ="testController(corseworksMainPage.name); testC(corseworksMainPage.name) ">{{corseworksMainPage.name}}</center>
+								</a>
+							</h3>
+							<!-- !-->
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+			function warning(){
+
+
+				swal({  
+					title: "Now you can read the article!",
+					text: "Take a look of articl",
+					type: "success",   
+					confirmButtonText: "Cool" });
+
+				
+
+			}
+
+			
+
+
+		</script>
+		
+
+
+		<form class="container" data-ng-init="init(corseworksOutlineTwo.name)">
+			<label>Write your comments about this coursework</label>
+			<input type="text" class="form-control" id="textboxsize" ng-model="textbody">
+			<button class="button" data-toggle="modal" data-target=".bs-example-modal-lg" ng-repeat="corseworksOutlineTwo in corseworksOutlineTwo" ng-click="postmessage(corseworksOutlineTwo.name);" onClick="warning()" >Post </button>
+
+		</form>
+
+
+	</div>
+
+
+
+	<div class= "container" ng-controller="AppCtrl">
+		<div class="row" >
+			<div class="col-sm-6 col-md-4">
+				<div class="michalis">
+					<div class="caption">
+						<h2 class="glyphicon glyphicon-star"> Comments</h2>
+
+						
+						<ul class="divided" >
+							<li ng-repeat="likecourseworks in likecourseworks" >
+								
+												<!--	<script>
+														
+		 													var scrt_var = ""; 
+
+												location.href=this.href+scrt_var;return false;
+
+
+													</script>
+													!-->
+
+													<script type="text/javascript">
+
+														function warning(){
+
+
+															swal({  
+																title: "Now you can read the article!",
+																text: "Take a look of articl",
+																type: "success",   
+																confirmButtonText: "Cool" });
+
+															
+
+														};
+
+														
+
+														
+
+
+													</script>
+
+													<center><h3>{{likecourseworks.bodyMessage}} </h3></center>
+
+													
+
+													
+												</li>
+
+												
+												
+											</ul>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+							
+
+
+
+
+
+
+
+							
+
+
+
+
+							
+
+
+
+							<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+							<script src="../controllers/controller.js"> </script>
+							
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+							<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+						</script>
+					</body>
+
+
+
+
+
+					</html>

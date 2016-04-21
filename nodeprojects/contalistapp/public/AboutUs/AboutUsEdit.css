@@ -1,0 +1,57 @@
+.container h1 { text-align: center;
+
+
+
+
+}
+.jumbotron {
+				background-color: transparent;
+}
+
+video#bgvid { 
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+
+
+    width: 100%;
+    height: auto;
+}
+
+.row { margin-top: 1000px;
+
+
+}
+
+#editH1 {color: #d54d7b; font-family: "Great Vibes", 
+cursive; font-size: 45px; line-height: 160px; 
+font-weight: normal; margin-bottom: 0px; 
+margin-top: 40px; text-align: center; 
+text-shadow: 0 1px 1px #fff;
+color: black;
+text-decoration: 
+
+}
+
+#Godown { margin-top: 35%;
+
+	
+}
+
+#buttonedit {	background-color:Black; margin-left:38%;
+					
+}
+#banner {
+	
+	
+}
+
+#sectionTomove {
+
+        margin-bottom: 150px;
+}
